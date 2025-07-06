@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simultaneous Maps Search</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js">
+    </script>
+    <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
-    
+    <div class="search-container">
+        <p>Input a U.S. city and a radius to find hotels within the given radius of a supermarket.</p>
+        <form id="input">
+            <label for="city">City (city, state):</label>
+            <input id="city" name="city" value="Lexington, KY">
+            <br>
+            <label for="radius">Radius (miles):</label>
+            <input id="radius" name="radius" value="1">
+            <br>
+            <input id="inputSubmit" type="submit" value="Search">
+        </form>
+    </div>
+    <div class="results-container">
+        <div class="map-container"></div>
+        <div class="results-list"></div>
+    </div>
+<script src="./js/index.js"></script>
 </body>
 </html>
